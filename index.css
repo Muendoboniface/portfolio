@@ -381,6 +381,7 @@ footer > .social > a{
 footer > .copyright{
     font-size: large;
     font-family: sans-serif;
+    color: white;
 }
 @keyframes change {
     0% {
