@@ -270,6 +270,7 @@ p {
     opacity: 0.9;
     width: 100%;
     height: fit-content;
+    margin-top: -20px;
     z-index: 5;
     position: fixed;
     justify-content: space-around;
