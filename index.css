@@ -440,7 +440,7 @@ footer > .copyright{
     }
     #explore{
         margin-top: 0;
-        height: fit-content;
+        height:  -webkit-fill-available;
         overflow-y: auto;
         flex-direction: column;
     }
@@ -448,6 +448,8 @@ footer > .copyright{
         width: 98%;
         padding: 0 10px;
         height: fit-content;
+        overflow-y: auto;
+        background: linear-gradient(to bottom, rgb(17, 17, 17) 80%, rgb(105, 100, 100));
     }
     #explore > button{
         align-self: self-end;
