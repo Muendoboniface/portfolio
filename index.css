@@ -15,10 +15,7 @@ body {
 }
 
 .page {
-    background-image: url(back.jpg);
     font-family: sans-serif;
-    background-repeat: no-repeat;
-    background-size: 100%;
     overflow-x: hidden;
     height: 100vh;
     padding-bottom: 5px;
@@ -96,7 +93,7 @@ a:hover {
 
 .prof {
     width: 750px;
-    height: 380px;
+    height: 47vh;
     background-color: rgb(23, 184, 23);
     rotate: -40deg;
     border-radius: 235px 0 0 235px;
@@ -176,7 +173,7 @@ a:hover {
 }
 
 fieldset {
-    width: fit-content;
+    width: 90%;
     margin: auto;
 }
 
@@ -191,6 +188,7 @@ legend {
     display: flex;
     flex-direction: row;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .skills > * {
@@ -209,6 +207,9 @@ legend {
     box-shadow: 1px 1px 10px grey;
     font-size: small;
 }
+.skills > section > span{
+    color: blue;
+}
 
 aside>button:last-of-type {
     border: none;
@@ -226,17 +227,16 @@ p {
 
 .left>.projects {
     width: 90%;
-    height: 150px;
     display: flex;
+    gap: 15px;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .projects>section {
     width: 100px;
     height: 100px;
-    text-align: center;
     margin-bottom: 10px;
     background-color: rgb(94, 206, 94);
     border-radius: 15px;
@@ -244,7 +244,7 @@ p {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-    box-shadow: 0 0 16px rgb(202, 193, 193);
+    box-shadow: 0 0 16px dodgerblue;
 }
 
 .projects>section:hover {
@@ -414,4 +414,82 @@ footer > .copyright{
 @keyframes open {
     from{opacity: 0;}
     to{opacity: 1;}
+}
+@media  screen and (max-width : 800px) {
+    .prof{
+        display: none;
+    }
+    .left{
+        margin: 10px;
+        width: 95%;
+    }
+    .left > .projects{
+        width: 100%;
+    }
+    .left > h4{
+        height: 5px;
+        color: dodgerblue;
+    }
+    fieldset{
+        background-color: aliceblue;
+        width: 97%;
+    }
+    .skills{
+        column-gap: 3.3%;
+        justify-content: center;
+    }
+    #explore{
+        margin-top: 0;
+        height: fit-content;
+        overflow-y: auto;
+        flex-direction: column;
+    }
+    #explore > section{
+        width: 98%;
+        padding: 0 10px;
+        height: fit-content;
+    }
+    #explore > button{
+        align-self: self-end;
+    }
+    #explore > section > #location{
+        width: 100%;
+    }
+    nav{
+        margin-bottom: 0;
+        top: 0;
+    }
+    .about{
+        flex-wrap: wrap;
+    }
+    .about > img, .about > aside{
+        width: 95%;
+    }
+}
+@media  screen and (max-width : 1050px) {
+    .prof{
+        background-color: white;
+    }
+    .prof > h3{
+        color: black;
+    }
+    .about{
+        gap: 100px;
+    }
+}
+@media  screen and (max-width : 1220px) {
+    .prof{
+        height: 40vh;
+    }
+    .prof > h3{
+        margin-top: 100px;
+    }
+}
+@media  screen and (max-width : 1350px) {
+    .prof{
+        height: 44vh;
+    }
+    /* .prof > h3{
+        margin-top: 100px;
+    } */
 }
