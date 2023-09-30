@@ -450,7 +450,7 @@ footer > .copyright{
         padding: 0 10px;
         height: fit-content;
         overflow-y: auto;
-        background: linear-gradient(to bottom, rgb(17, 17, 17) 80%, rgb(105, 100, 100));
+        background: linear-gradient(to bottom, black 80%, rgb(105, 100, 100));
     }
     #explore > button{
         align-self: self-end;
