@@ -207,6 +207,7 @@ legend {
     padding-top: 30px;
     background-color: gray;
     box-shadow: 1px 1px 10px grey;
+    font-size: small;
 }
 
 aside>button:last-of-type {
