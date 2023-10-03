@@ -66,6 +66,30 @@ function cv(){
     link.download = "MyCv.pdf";
     link.click();
 }
+function openNav(el){
+    if(el.parentElement.clientHeight == 40){
+        el.parentElement.style.height = 'initial';
+        el.parentElement.style.marginTop = '193px';
+    }
+    else {
+        el.parentElement.style.height = '40px';
+        el.parentElement.style.margin = '0';
+    }
+}
+let a = document.querySelectorAll(".company > nav > aside > a");
+for(let i = 0; i < a.length; i++){
+    a[i].addEventListener('click',function(){
+    window.scrollTo({
+        top: document.getElementById(this.dataset.href).offsetTop - 100,
+        behavior: 'smooth',
+    })
+    })
+}
+function goTo(url){
+    let a = document.createElement("a");
+    a.href = url;
+    a.click();
+}
 function openProjects(){
     paragraph.style.display = "none";
     header[0].style.display = "none";
