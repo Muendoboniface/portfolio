@@ -77,6 +77,11 @@ function closeNav(el){
     el.parentElement.style.height = '40px';
     el.parentElement.style.margin = '0';
 }
+window.onclick = function(e){
+if(!e.target.classList.contains('navLinks') && !e.target.classList.contains('bar') && document.querySelector(".company > nav > aside").clientHeight > 50){
+    alert("not targeted")
+}
+}
 let a = document.querySelectorAll(".company > nav > aside > a");
 for(let i = 0; i < a.length; i++){
     a[i].addEventListener('click',function(){
@@ -108,8 +113,11 @@ function openProjects(){
     });
 }
 button[1].onclick = function(){
+    if(this.innerText =='View'){
+        goTo('https://www.google.com/maps/place/Jasdes+Solutions/@-1.5434767,36.9394961,15z/data=!4m6!3m5!1s0x182fa34d14335e15:0x4c0e8b4cda77bd4a!8m2!3d-1.5434767!4d36.9394961!16s%2Fg%2F11k582s_36?entry=ttu')
+    } else {
     document.getElementById("explore").style.display = "flex"
     document.querySelector("div#explore > button").onclick =function(){
         this.parentElement.style.display = "none";
-    }
+    }}
 }
