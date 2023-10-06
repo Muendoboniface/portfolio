@@ -71,10 +71,11 @@ function openNav(el){
         el.parentElement.style.height = 'initial';
         el.parentElement.style.marginTop = '193px';
     }
-    else {
-        el.parentElement.style.height = '40px';
-        el.parentElement.style.margin = '0';
-    }
+    else { closeNav(el) }
+}
+function closeNav(el){
+    el.parentElement.style.height = '40px';
+    el.parentElement.style.margin = '0';
 }
 let a = document.querySelectorAll(".company > nav > aside > a");
 for(let i = 0; i < a.length; i++){
@@ -83,6 +84,7 @@ for(let i = 0; i < a.length; i++){
         top: document.getElementById(this.dataset.href).offsetTop - 100,
         behavior: 'smooth',
     })
+    closeNav(this);
     })
 }
 function goTo(url){

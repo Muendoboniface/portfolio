@@ -504,6 +504,9 @@ p {
     animation: open 6s;
     -webkit-animation: open 2s;
 }
+#Home > p:nth-of-type(2){
+    width: 58%;
+}
 
 #explore>section {
     width: 40%;
@@ -665,9 +668,65 @@ footer>.copyright {
     }
 }
 
+@media screen and (max-width : 500px) {
+    .panel{
+        width: 95%;
+    }
+    .CompLocation > h1{
+        display: none;
+    }
+    .CompLocation > section{
+        margin: 0;
+    }
+    .panel > div > h1{
+        font-size: 25px;
+    }
+    #Home > h1{
+        margin-left: -20px;
+    }
+    p {
+        font-size: 15px;
+    }
+    #Home > p:nth-of-type(2){
+        width: 100%;
+    }
+    #Contact > .softwares {
+flex-direction: column-reverse;
+gap: 5px;
+    }
+    #Contact > .softwares > aside{
+        width: 320px;
+    }
+    #About > div > aside,
+    #Deals > div > aside{
+        min-width: -webkit-fill-available;
+    }
+    .panel > div, .company > footer {
+        margin-top: 30px;
+    }
+    #Contact > .softwares > aside > a{
+        width: 45%;
+    }
+    #Contact > .softwares > aside > a:nth-of-type(4),
+    #Contact > .softwares > aside > a:nth-of-type(5),
+    #Contact > .softwares > aside > a:nth-of-type(6){ 
+        align-self: flex-end;
+    }
+
+    #Contact > .softwares > aside > a:nth-of-type(4){
+        margin-top: -130px;
+    }
+}
 @media screen and (max-width : 800px) {
     .prof {
         display: none;
+    }
+    .panel > div > div{
+        overflow-x: auto;
+        flex-flow: row;
+    }
+    .panel > div > div > section > img{
+        width: 210px;
     }
 
     .company>nav {
@@ -771,6 +830,13 @@ footer>.copyright {
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         -o-border-radius: 0;
+        height: fit-content;
+}
+.company > footer{
+    padding: 15px 0;
+}
+div.page{
+    padding-bottom: 0;
 }
 }
 
