@@ -69,18 +69,13 @@ function cv(){
 function openNav(el){
     if(el.parentElement.clientHeight == 40){
         el.parentElement.style.height = 'initial';
-        el.parentElement.style.marginTop = '193px';
+        el.parentElement.style.marginTop = '210px';
     }
     else { closeNav(el) }
 }
 function closeNav(el){
     el.parentElement.style.height = '40px';
     el.parentElement.style.margin = '0';
-}
-window.onclick = function(e){
-if(!e.target.classList.contains('navLinks') && !e.target.classList.contains('bar') && document.querySelector(".company > nav > aside").clientHeight > 50){
-    alert("not targeted")
-}
 }
 let a = document.querySelectorAll(".company > nav > aside > a");
 for(let i = 0; i < a.length; i++){
