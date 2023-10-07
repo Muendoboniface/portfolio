@@ -77,16 +77,13 @@ function closeNav(el){
     el.parentElement.style.height = '40px';
     el.parentElement.style.margin = '0';
 }
-let a = document.querySelectorAll(".company > nav > aside > a");
-for(let i = 0; i < a.length; i++){
-    a[i].addEventListener('click',function(){
+function Scroll(el){
     window.scrollTo({
-        top: document.getElementById(this.dataset.href).offsetTop - 100,
+        top: document.getElementById(el.dataset.href).offsetTop - 80,
         behavior: 'smooth',
     })
-    closeNav(this);
-    })
-}
+    closeNav(el);
+    }
 function goTo(url){
     let a = document.createElement("a");
     a.href = url;
