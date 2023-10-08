@@ -43,6 +43,7 @@
     backdrop-filter: blur(15px);
     font-size: xx-large;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 2;
 }
 
 .panel>div>p>a {
