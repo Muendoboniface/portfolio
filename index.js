@@ -7,7 +7,7 @@ header = document.querySelectorAll("h5"),
 pos = 0, prof;
 if(window.innerWidth < '501'){ prof = document.querySelector(".left > h4"), prof.innerHTML = ''}
 else{ prof = document.querySelector(".prof > h3")};
-let text = ["SOFTWARE DEVELOPER", "SOFTWARE DESIGNER", "PROGRAMMER"];
+let text = ["SOFTWARE DEVELOPER", "WEB DEVELOPER", "PROGRAMMER"];
 window.onload = setTimeout(TextIn, 1000)
 function TextIn() {
     if (i < text[pos].length) {
@@ -48,23 +48,17 @@ if (i == -1) {
     function hire(){
    let choose =  prompt("Choose your preffered media to chat with me : \n\n 1. WhatsApp.\n 2. Email.\n 3.Phone call");
     if(choose == 1){
-        window.location.assign("http://wa.me/+254705788336");
+        window.location.assign("http://wa.me/+254705200170");
     }
     if(choose == 2){
-        window.location.assign("mailto:jumextoginga@gmail.com")
+        window.location.assign("mailto:bmuendo336@gmail.com")
     }
     if(choose == 3){
-        window.location.assign("tel:+254705788336")
+        window.location.assign("tel:+254705200170")
     }
     if(choose ==" " || choose==0 || choose > 3){
        choose = prompt("Invalid selection !!\nChoose your preffered media to chat with me : \n\n 1. WhatsApp.\n 2. Email.\n 3.Phone Call");
     }
-}
-function cv(){
-    let link = document.createElement("a");
-    link.href = "document.pdf";
-    link.download = "MyCv.pdf";
-    link.click();
 }
 function openNav(el){
     if(el.parentElement.clientHeight == 40){
@@ -103,13 +97,4 @@ function openProjects(){
             a.click();
         }
     });
-}
-button[1].onclick = function(){
-    if(this.innerText =='View'){
-        goTo('https://www.google.com/maps/place/Jasdes+Solutions/@-1.5434767,36.9394961,15z/data=!4m6!3m5!1s0x182fa34d14335e15:0x4c0e8b4cda77bd4a!8m2!3d-1.5434767!4d36.9394961!16s%2Fg%2F11k582s_36?entry=ttu')
-    } else {
-    document.getElementById("explore").style.display = "flex"
-    document.querySelector("div#explore > button").onclick =function(){
-        this.parentElement.style.display = "none";
-    }}
 }
