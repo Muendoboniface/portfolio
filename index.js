@@ -98,3 +98,9 @@ function openProjects(){
         }
     });
 }
+button[1].onclick = function(){
+    document.getElementById("explore").style.display = "flex"
+    document.querySelector("div#explore > button").onclick =function(){
+        this.parentElement.style.display = "none";
+    }
+}
